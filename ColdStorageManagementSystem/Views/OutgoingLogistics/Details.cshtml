@@ -1,0 +1,66 @@
+﻿@model MyFirstProj.Models.OutgoingLogistic
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>OutgoingLogistic</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer.CustomerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customer.CustomerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OutgoingLogisticDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OutgoingLogisticDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OutgoingLogisticName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OutgoingLogisticName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OutgoingLogisticCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OutgoingLogisticCost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OutgoingLogisticQuantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OutgoingLogisticQuantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OutgoingLogisticLocation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OutgoingLogisticLocation)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.OutgoingLogisticID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

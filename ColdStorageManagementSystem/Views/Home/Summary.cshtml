@@ -1,0 +1,98 @@
+﻿@using MyFirstProj
+
+@{
+    ViewBag.Title = "Summary";
+}
+
+<center>
+    <h2>Summary</h2>
+    <hr/>
+    <h1>Customer Details</h1>
+    <hr/>
+    <table border="1">
+        <tr>
+            <th>Customer ID</th>
+            <th>Customer Name</th>
+            <th>Customer Phone Number</th>
+            <th>Customer Email</th>
+            <th>Customer House Number</th>
+            <th>Customer Street Name</th>
+            <th>Customer City</th>
+            <th>Customer Zip Code</th>
+            <th>Customer State</th>
+        </tr>
+        @foreach (MyFirstProj.Models.Customer Cust in ViewBag.CustomerDetails)
+        {
+            <tr>
+                <td>@Cust.CustomerID</td>
+                <td>@Cust.CustomerName</td>
+                <td>@Cust.CustomerPhoneNumber</td>
+                <td>@Cust.CustomerEmail</td>
+                <td>@Cust.CustomerHouseNumber</td>
+                <td>@Cust.CustomerStreetName</td>
+                <td>@Cust.CustomerCity</td>
+                <td>@Cust.CustomerZipCode</td>
+                <td>@Cust.CustomerState</td>
+
+            </tr>
+        }
+    </table>
+        <h1>OutgoingLogistic Details</h1>
+        <hr />
+    <table border="1">
+        <tr>
+            <th>Customer ID</th>
+            <th>OutgoingLogistic ID</th>
+            <th>OutgoingLogistic Date</th>
+            <th>OutgoingLogistic Name</th>
+            <th>OutgoingLogistic Cost</th>
+            <th>OutgoingLogistic Quantity</th>
+            <th>OutgoingLogistic Location</th>
+
+        </tr>
+        @foreach (MyFirstProj.Models.OutgoingLogistic OutLog in ViewBag.OutgoingLogisticDetails)
+        {
+            <tr>
+
+                <td>@OutLog.CustomerID</td>
+                <td>@OutLog.OutgoingLogisticID</td>
+                <td>@OutLog.OutgoingLogisticDate</td>
+                <td>@OutLog.OutgoingLogisticName</td>
+                <td>@OutLog.OutgoingLogisticCost</td>
+                <td>@OutLog.OutgoingLogisticQuantity</td>
+                <td>@OutLog.OutgoingLogisticLocation</td>
+
+
+            </tr>
+        }
+    </table>
+    <h1>Payment Details</h1>
+    <hr />
+    <table border="1">
+
+        <tr>
+            <th>Customer ID</th>
+            <th>Payment ID</th>
+            <th>Payment Type</th>
+            <th>Payment Amount</th>
+            <th>Payment Date</th>
+            <th>Payment Time</th>
+            
+        </tr>
+        @foreach (MyFirstProj.Models.Payment Pay in ViewBag.PaymentDetails)
+        {
+            <tr>
+                <td>@Pay.CustomerID</td>
+                <td>@Pay.PaymentID</td>
+                <td>@Pay.PaymentType</td>
+                <td>@Pay.PaymentAmount</td>
+                <td>@Pay.PaymentDate</td>
+                <td>@Pay.PaymentTime</td>
+                
+
+            </tr>
+        }
+    </table>
+
+</center>
+

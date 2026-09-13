@@ -1,0 +1,68 @@
+﻿@model MyFirstProj.Models.CustomerLoan
+
+@{
+    ViewBag.Title = "Details";
+}
+<body style="background-color: #deeaee">
+    <h2>Details</h2>
+
+    <div>
+        <h4>CustomerLoan</h4>
+        <hr />
+        <dl class="dl-horizontal">
+
+            <dt>
+                @Html.DisplayNameFor(model => model.IncomingLogistic.IncomingLogisticName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.IncomingLogistic.IncomingLogisticName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CustomerLoanDate)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CustomerLoanDate)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CustomerLoanAmount)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CustomerLoanAmount)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CustomerLoanBankName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CustomerLoanBankName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CustomerAccountNumber)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CustomerAccountNumber)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CustomerLoanBankIFSCCode)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CustomerLoanBankIFSCCode)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.CustomerLoanID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>

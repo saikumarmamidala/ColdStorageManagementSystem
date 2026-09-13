@@ -1,0 +1,63 @@
+﻿@model IEnumerable<MyFirstProj.Models.OutgoingLogistic>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Customer.CustomerName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OutgoingLogisticDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OutgoingLogisticName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OutgoingLogisticCost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OutgoingLogisticQuantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OutgoingLogisticLocation)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Customer.CustomerName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OutgoingLogisticDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OutgoingLogisticName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OutgoingLogisticCost)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OutgoingLogisticQuantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OutgoingLogisticLocation)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.OutgoingLogisticID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.OutgoingLogisticID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.OutgoingLogisticID })
+        </td>
+    </tr>
+}
+
+</table>

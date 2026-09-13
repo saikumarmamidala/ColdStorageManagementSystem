@@ -1,0 +1,94 @@
+﻿@model IEnumerable<MyFirstProj.Models.CustomerLoan>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<style>
+    table {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+         td,  th {
+            border: 1px solid #ddd;
+            padding: 6px;
+        }
+
+         tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+         tr:hover {
+            background-color: #ddd;
+        }
+
+    th {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: left;
+       
+        background-color: #034f84;
+         color: white;
+    }
+</style>
+<body style="background-color:#deeaee">
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table >
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IncomingLogistic.IncomingLogisticName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerLoanDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerLoanAmount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerLoanBankName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerAccountNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerLoanBankIFSCCode)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IncomingLogistic.IncomingLogisticName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerLoanDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerLoanAmount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerLoanBankName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerAccountNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerLoanBankIFSCCode)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CustomerLoanID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CustomerLoanID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CustomerLoanID })
+            
+        </td>
+    </tr>
+}
+
+</table>
+    </body>

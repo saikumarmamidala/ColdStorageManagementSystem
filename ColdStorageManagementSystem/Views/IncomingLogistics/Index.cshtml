@@ -1,0 +1,75 @@
+﻿@model IEnumerable<MyFirstProj.Models.IncomingLogistic>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Customer.CustomerName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IncomingLogisticDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IncomingLogisticName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IncomingLogisticCost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IncomingLogisticQuantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IncomingLogisticLocation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IncomingLogisticInsurance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IncomingLogisticRent)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Customer.CustomerName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IncomingLogisticDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IncomingLogisticName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IncomingLogisticCost)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IncomingLogisticQuantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IncomingLogisticLocation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IncomingLogisticInsurance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IncomingLogisticRent)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IncomingLogisticID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IncomingLogisticID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IncomingLogisticID })
+        </td>
+    </tr>
+}
+
+</table>

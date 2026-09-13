@@ -1,0 +1,117 @@
+﻿@model IEnumerable<MyFirstProj.Models.Customer>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<style>
+    table {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+         td,  th {
+            border: 1px solid #ddd;
+            padding: 5px;
+        }
+
+         tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+         tr:hover {
+            background-color: #ddd;
+        }
+
+    th {
+        padding-top: 25px;
+        padding-bottom: 25px;
+        text-align: left;
+
+        background-color: #034f84;
+         color: white;
+    }
+</style>
+<body style="background-color:#deeaee">
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        @using (Html.BeginForm())
+        {
+            <p>
+                Name  : @Html.TextBox("SearchName")<br />
+                <input type="submit" value="Search" />
+            </p>
+
+        }
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CustomerName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CustomerPhoneNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CustomerEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CustomerHouseNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CustomerStreetName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CustomerCity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CustomerZipCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CustomerState)
+            </th>
+            <th>Edit Options</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CustomerName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CustomerPhoneNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CustomerEmail)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CustomerHouseNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CustomerStreetName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CustomerCity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CustomerZipCode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CustomerState)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.CustomerID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.CustomerID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.CustomerID })
+                    @Html.ActionLink("Invoice", "Invoice", new { id = item.CustomerID })
+
+                </td>
+            </tr>
+        }
+
+    </table>
+</body>

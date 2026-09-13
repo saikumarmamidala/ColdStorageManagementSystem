@@ -1,0 +1,90 @@
+﻿@model MyFirstProj.Models.Customer
+
+@{
+    ViewBag.Title = "Details";
+}
+<body style="background-color: #deeaee">
+    <h2>Details</h2>
+
+    <div>
+        <h4>Customer</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.CustomerName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CustomerName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CustomerPhoneNumber)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CustomerPhoneNumber)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CustomerEmail)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CustomerEmail)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CustomerHouseNumber)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CustomerHouseNumber)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CustomerStreetName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CustomerStreetName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CustomerCity)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CustomerCity)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CustomerZipCode)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CustomerZipCode)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CustomerState)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CustomerState)
+            </dd>
+            <!--  <dt>
+                  @Html.DisplayNameFor(model => model.CustomerPwd)
+              </dt>
+
+              <dd>
+                  @Html.DisplayFor(model => model.CustomerPwd)
+              </dd>-->
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.CustomerID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>

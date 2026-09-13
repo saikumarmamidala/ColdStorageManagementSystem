@@ -1,0 +1,81 @@
+﻿@model MyFirstProj.Models.Invoice
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+<html>
+<body>
+    <style>
+        .b2 {
+            width: 150px;
+            height: 40px;
+            left: 970px;
+            top: 100px;
+            background: #2F3C7E;
+            color: white;
+            position: absolute;
+            z-index: 20;
+            cursor: pointer;
+            font-size: 18px;
+        }
+    </style>
+
+    <div>
+        <h4>Invoice</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Customer.CustomerName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Customer.CustomerName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.OutgoingLogistic.OutgoingLogisticName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.OutgoingLogistic.OutgoingLogisticName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Payment.PaymentType)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Payment.PaymentType)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.OutgoingLogisticQuantity)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.OutgoingLogisticQuantity)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Date)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Date)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Time)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Time)
+            </dd>
+
+        </dl>
+    </div>
+    <div style="text-align:center;"><button type="button" class="b2" onclick="location.href='@Url.Action( "Index", "Home")'">Logout</button></div>
+</body>
+</html>
